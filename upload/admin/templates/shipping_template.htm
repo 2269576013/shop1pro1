@@ -1,0 +1,21 @@
+{include file="pageheader.htm"}
+{insert_scripts files="../js/utils.js,listtable.js"}
+<form method="post" name="theForm" action="shipping.php?act=do_edit_print_template&shipping={$shipping.shipping_id}">
+
+<div class="form-div">
+  <table id="general-table" align="center">
+  <tr>
+    <td colspan="2"><h2>{$shipping.shipping_name}-{$lang.shipping_print_template}</h2></td>
+  </tr>
+  <tr>
+    <td><textarea id="shipping_print" name="shipping_print" rows="26" cols="100" >{$shipping.shipping_print|escape:html}</textarea></td>
+    <td align="left" valign="top">{$lang.shipping_template_info}</td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" value="{$lang.button_submit}" class="button" /></td>
+  </tr>
+  </table>
+</div>
+</form>
+
+{include file="pagefooter.htm"}
